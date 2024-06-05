@@ -14,7 +14,7 @@ def main():
                 sys.exit()
             # TODO 3: Make the eye pupils move with Up, Down, Left, and Right keys
 
-        screen.fill((255, 255, 255))  # white
+        screen.fill((225, 225, 225))
 
         # API --> pygame.draw.circle(screen, color, (x, y), radius, thickness)
 
@@ -28,7 +28,7 @@ def main():
         pygame.draw.circle(screen, (225, 225, 225), (400, 160), 25)  # white eye
         pygame.draw.circle(screen, (0, 0, 0), (400, 160), 25, 3)  # black outline
         pygame.draw.circle(screen, (0, 0, 0), (398, 162), 7)  # black pupil
-
+        pygame.draw.circle(screen,(80,0,0),(320,245), 10 )#mouth
         # TODO 1: Draw a nose
         # Suggestion: color (80,0,0) location (320,245), radius 10
         # API --> pygame.draw.circle(screen, (r,g,b), (x, y), radius, thickness)
