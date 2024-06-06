@@ -28,6 +28,7 @@ def main():
         if pressed_keys[pygame.K_LEFT]:
             x=x-1
             #hi
+            #a
         screen.fill((225, 225, 225))
 
         # API --> pygame.draw.circle(screen, color, (x, y), radius, thickness)
