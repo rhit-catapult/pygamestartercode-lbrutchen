@@ -18,7 +18,10 @@ def main():
     clock = pygame.time.Clock()
 
     # done: Create an instance of the Ball class called ball1
-    ball1=Ball(screen)
+    balls=[]
+    for k in range(400):
+        ball1=Ball(screen)
+        balls.append(ball1)
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -29,18 +32,20 @@ def main():
 
         # done: Move the ball
         # done: Draw the ball
-        ball1.draw()
-        ball1.move()
+
+        for ball in balls :
+            ball.move()
+            ball.draw()
         pygame.display.update()
 class Ball:
     def __init__(self, screen):
         self.screen=screen
         self.x=random.randint(1,20)
         self.y=random.randint(1,20)
-        self.x_speed = random.randint(2,3 )
+        self.x_speed = random.randint(1,10 )
         self.circle_color =(random.randint(0,255),random.randint(0,255),random.randint(0,255))
         self.circle_radius = random.randint(1,10)
-        self.y_speed = random.randint(2, 3)
+        self.y_speed = random.randint(1, 10)
     def draw(self):
         pygame.draw.circle(self.screen, self.circle_color, (self.x,self.y),self.circle_radius)
 
